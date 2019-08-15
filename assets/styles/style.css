@@ -1,3 +1,91 @@
-h1 {
-    color: red;
+body {
+    font-family: sans-serif;
+    margin: 0;
 }
+/* Header */
+.header {
+    height: 10vh;
+    position: relative;
+    border-bottom: 2px solid black;
+}
+.header > .row {
+    display: flex;
+    justify-content: space-between;
+}
+.logo > img {
+    max-width: 80px;
+    max-height: 80px;
+}
+#nav-trigger {
+    padding: 14px 16px;
+    margin: 5px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 24px;
+} 
+#nav-trigger:hover {
+    background: #9BFAFC;
+    color: white;
+}
+
+/* Main content */
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 90vh;
+    /* Flexbox stuff */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    /* Text Styles */
+    text-align: center;
+    /* Background styles */
+    background-size: contain;
+    background-position: center center;
+}
+.goodbye {
+    display: none;
+}
+/* Open Navbar */
+.tiles {
+    /* display: flex; */
+    border: 2px solid pink;
+    width: 100vw;
+    height: 90vh;
+}
+.tiles > .row {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+    border: 2px solid green;
+    width: 100vw;
+    height: 90vh;
+}
+#col1 {
+    border: 2px solid black;
+    background: lightgreen;
+}
+#col2 {
+    border: 2px solid green;
+    background: lightyellow;
+}
+#col3 {
+    border: 2px solid blue;
+    background: lightcoral;
+}
+.tile {
+    border: 2px solid black;
+    background: lightblue;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    justify-content: center;
+
+}
+.tile:hover {
+    opacity: 0.5;
+}
+/* Footer */
