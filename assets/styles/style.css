@@ -46,13 +46,35 @@ body {
     background-size: contain;
     background-position: center center;
 }
+@keyframes enter {
+    from {display: flex;}
+    to {display: none;}
+}
 .goodbye {
+    animation-name: enter;
+    animation-duration: 4s;
     display: none;
 }
+.op-tile {
+    opacity: 0;
+}
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.op-tile:hover {
+    animation-name: fade;
+    animation-duration: .75s;
+    opacity: 1;
+}
+.op-tile.closed {
+	max-height: 0;
+}
+
 /* Open Navbar */
 .tiles {
     /* display: flex; */
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     width: 100vw;
     height: 90vh;
 }
@@ -60,32 +82,65 @@ body {
     display: flex;
     flex-flow: column wrap;
     align-content: space-around;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width: 100vw;
     height: 90vh;
 }
 #col1 {
-    border: 2px solid black;
-    background: lightgreen;
+    /* border: 2px solid black; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 #col2 {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     background: lightyellow;
 }
 #col3 {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     background: lightcoral;
 }
 .tile {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     background: lightblue;
     display: flex;
     flex-flow: column;
     text-align: center;
     justify-content: center;
+}
+.op-tile {
+    opacity: 0;
+}
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.op-tile:hover {
+    animation-name: fade;
+    animation-duration: .75s;
+    opacity: 1;
+}
+#col1Hover {
+    color: green;
+}
+.tile {
+    position: relative;
+    overflow: hidden;
+}
+.tile > h1 {
+    padding: 200px;
+    position: relative;
+    z-index: 2;
+}
+.tile > img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+.noop {
+    opacity:
+}
 
-}
-.tile:hover {
-    opacity: 0.5;
-}
 /* Footer */
