@@ -45,14 +45,10 @@ body {
     /* Background styles */
     background-size: contain;
     background-position: center center;
-}
-@keyframes enter {
-    from {display: flex;}
-    to {display: none;}
+    animation-name: fade;
+    animation-duration: 1s;
 }
 .goodbye {
-    animation-name: enter;
-    animation-duration: 4s;
     display: none;
 }
 .op-tile {
@@ -67,16 +63,19 @@ body {
     animation-duration: .75s;
     opacity: 1;
 }
-.op-tile.closed {
-	max-height: 0;
+.sm-icons {
+    /* max-width: 4em; */
+    /* border: 2px solid gray; */
+    height: 30%;
 }
-
 /* Open Navbar */
 .tiles {
     /* display: flex; */
     /* border: 2px solid pink; */
     width: 100vw;
     height: 90vh;
+    animation-name: fade;
+    animation-duration: 1s;
 }
 .tiles > .row {
     display: flex;
@@ -86,61 +85,46 @@ body {
     width: 100vw;
     height: 90vh;
 }
-#col1 {
-    /* border: 2px solid black; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-#col2 {
-    /* border: 2px solid green; */
-    background: lightyellow;
-}
-#col3 {
-    /* border: 2px solid blue; */
-    background: lightcoral;
-}
-.tile {
-    /* border: 2px solid black; */
-    background: lightblue;
-    display: flex;
-    flex-flow: column;
-    text-align: center;
-    justify-content: center;
-}
-.op-tile {
-    opacity: 0;
-}
 @keyframes fade {
     from {opacity: 0;}
     to {opacity: 1;}
-}
-.op-tile:hover {
-    animation-name: fade;
-    animation-duration: .75s;
-    opacity: 1;
-}
-#col1Hover {
-    color: green;
-}
+} 
 .tile {
-    position: relative;
     overflow: hidden;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .tile > h1 {
     padding: 200px;
     position: relative;
     z-index: 2;
 }
-.tile > img {
+.tile > .op-img {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: auto;
 }
-.noop {
-    opacity:
-}
+@media screen and (max-width: 575px) {
+    .tiles {
+        border: 2px solid black;
+    }
+    .tile {
+        height: 4.5em;
+        /* border: 2px solid green; */
+    }
+    .sm-icons {
+        /* margin-left: 10em; */
+    }
 
-/* Footer */
+    #nav-trigger {
+        margin-top: -75px;
+    }
+    .center-square {
+        height: 25px;
+    }
+}
